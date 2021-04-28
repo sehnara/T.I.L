@@ -1,3 +1,7 @@
+body{
+  background-color: darkorange;  
+}
+
 h1{
   text-align: center;
   margin: 50px 0;
@@ -10,7 +14,31 @@ h2{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 25px;
 }
+form{
+  text-align: center;
+}
 
-.js-formRange input{
+.js-formRange input{  
+  width: 310px;  
+}
+
+.js-chooseNum{
+  text-align: center;
+  margin-top:100px ;
+  font-size: 25px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.js-chooseNum input{
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.js-result{
   
+  width: 450px;
+
+  font-family: 'Zen Dots', cursive;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 20px;
 }
