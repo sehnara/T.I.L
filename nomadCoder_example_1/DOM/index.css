@@ -7,14 +7,6 @@
   overflow: hidden;
   margin: 50px auto;  
 }
-@keyframes fadeIn {
-  from{
-    opacity: 1;
-  }
-  to{
-    opacity: 0;
-  }
-}
 
 .d2{
   width: 150px;
@@ -45,4 +37,16 @@
 .dd{
   display: flex;
   justify-content: center;
+}
+
+.mouse{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mouse img{
+  transition: transform 0.2s linear;
+}
+.mouse img:hover{
+  transform : scale(1.1);
 }
