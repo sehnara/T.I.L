@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <form action="#">
+    <fieldset>
+      <legend>주문정보</legend>
+      <table>
+        <tr>
+          <td><label for="nameOrder">이름 : </label></td>
+          <td><input type="text" id="nameOrder"></td>          
+        </tr>    
+        <tr>
+          <td><label for="telOrder">연락처 : </label></td>
+          <td><input type="text" id="telOrder"></td>
+        </tr>
+        <tr>
+          <td><label for="addrOrder">주소 : </label></td>
+          <td><input type="text" id="addrOrder"></td>
+        </tr>        
+      </table>
+    </fieldset>
+
+    <fieldset>       
+      <input type="checkbox" name="copy" id="copyContent"> 주문 정보와 배송 정보가 같습니다.
+      <legend>배송정보</legend>
+      <table>    
+        <tr>
+          <td><label for="nameTak">이름 : </label></td>
+          <td><input type="text" id="nameTak"></td>
+        </tr>  
+        <tr>
+          <td><label for="telTak">연락처 : </label></td>
+          <td><input type="text" id="telTak"><br></td>
+        </tr>
+        <tr>
+          <td><label for="addrTak">주소 : </label></td>
+          <td><input type="text" id="addrTak"></td>
+        </tr>
+      </table>
+
+    </fieldset>
+    <input type="submit" value="결제하기">
+  </form>
+</body>
+</html>
