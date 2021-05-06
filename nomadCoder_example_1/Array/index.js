@@ -124,23 +124,25 @@ console.log(e);
   console.log(str);
 }
 
-//2. 
+//2. split(구분자, 제한자(몇 개까지 보낼래?))
 {
   const fruits = 'apple, banana, orange,kiwi';
-  const arr = fruits.split(',');
+  const arr = fruits.split(',',3);
   console.log(arr);
 }
 
-//3.
+//3. reverse()
 {
   const arr = [5,4,3,2,1];
   console.log(arr.reverse());
 }
 
-//4. 
+//4. splice() : 원래 배열의 변형이 발생 // slice() : 원래 배열의 변형없이, 새로운 배열을 생성 // 마지막은 배제된다.
 {
   const arr = [1,2,3,4,5];
-  const newArr = arr.splice(2,4);
+  // const newArr = arr.splice(2,4);
+  const newArr = arr.slice(2,5);
+  console.log(arr);
   console.log(newArr);
 }
 
@@ -160,7 +162,7 @@ const students = [
   new Student('E', 18, true, 88),
 ];
 
-//5.
+//5. find()
 {
   const arr = students.find(student=>{ // find는 조건에 만족하는 거 있으면 반환하고 바로 끝
     return student.score===90;
@@ -186,12 +188,18 @@ const students = [
 
 //8.
 {
-  const arr = students.filter(student =>{
-    return student.score<50;
-  });
-  if(arr.length>0){
-    console.log('There is the score lower than 50 in students group.')
-  }
+  console.clear();
+  // 1차 시도 : 좀 지저분
+  // const arr = students.filter(student =>{
+  //   return student.score<50;
+  // });
+  // if(arr.length>0){
+  //   console.log('There is the score lower than 50 in students group.')
+  // }
+
+  // 2차 시도
+  const scores = students.map(student=>student.score);
+  console.log(scores.some(score=>score<50));
 }
 
 //9. 
@@ -201,7 +209,7 @@ const students = [
 
   const tot = scores.reduce((acc, cur)=>{        
     return acc += cur;
-  });  
+  },0); // initial value = 0;
   console.log(`평균값은 ${tot/scores.length}`);
 }
 
