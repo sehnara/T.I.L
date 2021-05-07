@@ -213,9 +213,10 @@ const students = [
   console.log(`평균값은 ${tot/scores.length}`);
 }
 
-//10.
+//10. join / sort
 {
   const score = [45,80, 90, 66, 88];
   const str = score.sort().join(', ');
   console.log(str);
+  // ** sort((a,b)=>b-a) : 내림차순
 }
